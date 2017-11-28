@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{715c3c1a-de1c-4c0c-b8ca-9e79d3f0dd37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{6c87b533-e018-472a-af9b-b4e040b307cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Application">
+      <UniqueIdentifier>{54abffd7-c850-4051-a269-da4cbb0954ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{7e4b183e-c3c0-49e2-ac6a-82fea1250fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Components">
+      <UniqueIdentifier>{2a59f391-39b5-4ff0-8c2c-7278a0cfedb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Systems">
+      <UniqueIdentifier>{fba145bf-9c4a-4d34-b708-8b4884c263b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics">
+      <UniqueIdentifier>{074ca7ba-bee0-4227-967c-cab121916c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math">
+      <UniqueIdentifier>{5e888806-327d-4347-921a-15319de6a70e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\System">
+      <UniqueIdentifier>{0040fc6c-d649-43df-9825-00f4dffbefae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs">
+      <UniqueIdentifier>{37790297-e4ad-4b09-98b5-a4f65f62fa97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs\dirent">
+      <UniqueIdentifier>{f7c2f203-6d54-4a70-98e1-3f7d1d3ff11c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs\FastDynamicCast">
+      <UniqueIdentifier>{ce2b5138-a779-4108-8a1d-c6c9faeb2c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs\imgui">
+      <UniqueIdentifier>{98c2e18c-b32c-47cd-a6ff-d454f5b0f3b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs\miniz">
+      <UniqueIdentifier>{426aef6d-53ce-4608-9475-d2e09f9f23d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ExtLibs\pugixml">
+      <UniqueIdentifier>{846085bd-e6e6-4a8f-91de-7f032d7e6b2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Engine\Application\Application.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Application\AudioSystem.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Application\ImGuiWrapper.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Application\StateManager.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Application\Window.cpp">
+      <Filter>Engine\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\SceneComponent.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\World.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Component.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Entity.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\EntityHandle.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\EntityList.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\EntityManager.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\EntityQuery.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Map.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\MapUtility.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Node.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\RenderableComponent.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\ViewComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\ActionComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\AnimationComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\AudioListenerComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\LayerComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\ParticleComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\SpriteComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Components\TextComponent.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Systems\RenderSystem.cpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Systems\TimeSystem.cpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Systems\ActionSystem.cpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Systems\AnimationSystem.cpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core\Systems\ParticleSystem.cpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\Animation.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\Color.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\DebugDraw.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\Rect.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\SFMLResources.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\Tileset.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Graphics\View.cpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Vector3.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Vector4.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\AABB.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Distribution.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Matrix4.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Plane.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Quaternion.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Random.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Ray.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Sphere.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Vector2.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Math\Vector2i.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\String.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Time.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\UnitTest.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Compression.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Console.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\DataManager.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Date.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Localization.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Logger.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\ParserCsv.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\ParserIni.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\ParserPure.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\ParserXml.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Path.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\System\Profiler.cpp">
+      <Filter>Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Teleporter.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Weapon.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\WritingText.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Bar.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\BarComponent.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Chest.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\CollisionComponent.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Fx.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\GameMap.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\GameSingleton.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\GameState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Info.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\IntroState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\MenuState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\PopUp.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\PreState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Projectile.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Robot.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\RobotKiller.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\RobotMegaKiller.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\RobotMiniKiller.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\RobotPlayer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Spawner.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ExtLibs\pugixml\pugixml.cpp">
+      <Filter>Engine\ExtLibs\pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ExtLibs\miniz\miniz.c">
+      <Filter>Engine\ExtLibs\miniz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ExtLibs\imgui\imgui.cpp">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ExtLibs\imgui\imgui_demo.cpp">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ExtLibs\imgui\imgui_draw.cpp">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Engine\Application\Application.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Application\AudioSystem.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Application\ImGuiWrapper.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Application\ResourceManager.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Application\StateManager.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Application\Window.hpp">
+      <Filter>Engine\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\SceneComponent.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\World.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Component.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\ComponentList.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Entity.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\EntityHandle.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\EntityList.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\EntityManager.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\EntityQuery.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Map.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\MapUtility.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Node.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\RenderableComponent.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\TextComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\ViewComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\ActionComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\AnimationComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\AudioListenerComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\LayerComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\ParticleComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Components\SpriteComponent.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Systems\RenderSystem.hpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Systems\TimeSystem.hpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Systems\ActionSystem.hpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Systems\AnimationSystem.hpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core\Systems\ParticleSystem.hpp">
+      <Filter>Engine\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\Animation.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\Color.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\DebugDraw.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\Rect.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\SFMLResources.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\SFMLWrapper.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\Tileset.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Graphics\View.hpp">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Vector2i.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Vector3.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Vector4.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\AABB.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Distribution.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Math.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Matrix4.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Plane.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Quaternion.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Random.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Ray.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Sphere.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Math\Vector2.hpp">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Singleton.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\StackAllocator.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\String.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Time.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Type.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\UnitTest.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Compression.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Config.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Console.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\DataManager.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Date.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Hash.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Id.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\List.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Localization.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Logger.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\NonCopyable.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\ParserCsv.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\ParserIni.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\ParserPure.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\ParserXml.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Path.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Platform.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\PoolAllocator.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Prerequisites.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Profiler.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\System\Signal.hpp">
+      <Filter>Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Teleporter.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Weapon.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\WritingText.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Bar.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\BarComponent.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Chest.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\CollisionComponent.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Fx.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GameConfig.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GameMap.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GameSingleton.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GameState.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Info.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\IntroState.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\MenuState.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\PopUp.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\PreState.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Projectile.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Robot.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\RobotKiller.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\RobotMegaKiller.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\RobotMiniKiller.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\RobotPlayer.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Spawner.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\dirent\dirent.h">
+      <Filter>Engine\ExtLibs\dirent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\pugixml\pugixml.hpp">
+      <Filter>Engine\ExtLibs\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\stb_textedit.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\stb_truetype.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\imconfig.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\imgui.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\imgui_internal.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\imgui\stb_rect_pack.h">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ExtLibs\FastDynamicCast\fast_dynamic_cast.h">
+      <Filter>Engine\ExtLibs\FastDynamicCast</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Engine\Application\ResourceManager.inl">
+      <Filter>Engine\Application</Filter>
+    </None>
+    <None Include="..\Engine\ExtLibs\dirent\dirent.md">
+      <Filter>Engine\ExtLibs\dirent</Filter>
+    </None>
+    <None Include="..\Engine\ExtLibs\pugixml\pugixml.md">
+      <Filter>Engine\ExtLibs\pugixml</Filter>
+    </None>
+    <None Include="..\Engine\ExtLibs\miniz\miniz.md">
+      <Filter>Engine\ExtLibs\miniz</Filter>
+    </None>
+    <None Include="..\Engine\ExtLibs\imgui\imgui.md">
+      <Filter>Engine\ExtLibs\imgui</Filter>
+    </None>
+    <None Include="..\Engine\ExtLibs\FastDynamicCast\fast_dynamic_cast.md">
+      <Filter>Engine\ExtLibs\FastDynamicCast</Filter>
+    </None>
+  </ItemGroup>
+</Project>

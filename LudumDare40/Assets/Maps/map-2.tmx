@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="64" tileheight="64" nextobjectid="54">
+ <properties>
+  <property name="enemy_battery" type="int" value="120"/>
+  <property name="enemy_weapon" type="int" value="11"/>
+ </properties>
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="Calque de Tile 1" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1MEKgCAQBFDJAkmv3fr/7+wUCGnOzm4K4WEuYr5WV6NzLs48cgzwauntSW10fmn9UBnfG0H/E63zFLpLw0ZddJ+Rb+7x1ehcSy5bq7Y/2T2xdkeY6Bzt/WfdlIW5h1I39wLpSuanl1jUirrMmXrC1fYRupbVm/TFm2a9T6z9Nxe985vSRXpT07sS23cy2dqtTNS29mbscgEgMzFI
+  </data>
+ </layer>
+ <objectgroup name="Calque d'objets 1">
+  <object id="51" name="T" x="1696.97" y="412.121">
+   <properties>
+    <property name="map" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="52" name="C" x="800" y="930.303">
+   <properties>
+    <property name="weapon" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="53" name="C" x="672.727" y="345.455">
+   <properties>
+    <property name="weapon" type="int" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
