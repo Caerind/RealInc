@@ -90,27 +90,13 @@
     <ClCompile Include="..\Engine\System\UnitTest.cpp" />
     <ClCompile Include="..\Game\Bar.cpp" />
     <ClCompile Include="..\Game\BarComponent.cpp" />
-    <ClCompile Include="..\Game\Chest.cpp" />
     <ClCompile Include="..\Game\CollisionComponent.cpp" />
-    <ClCompile Include="..\Game\Fx.cpp" />
-    <ClCompile Include="..\Game\GameMap.cpp" />
+    <ClCompile Include="..\Game\GameConfig.cpp" />
     <ClCompile Include="..\Game\GameSingleton.cpp" />
     <ClCompile Include="..\Game\GameState.cpp" />
-    <ClCompile Include="..\Game\Info.cpp" />
     <ClCompile Include="..\Game\IntroState.cpp" />
     <ClCompile Include="..\Game\main.cpp" />
-    <ClCompile Include="..\Game\MenuState.cpp" />
     <ClCompile Include="..\Game\PopUp.cpp" />
-    <ClCompile Include="..\Game\PreState.cpp" />
-    <ClCompile Include="..\Game\Projectile.cpp" />
-    <ClCompile Include="..\Game\Robot.cpp" />
-    <ClCompile Include="..\Game\RobotKiller.cpp" />
-    <ClCompile Include="..\Game\RobotMegaKiller.cpp" />
-    <ClCompile Include="..\Game\RobotMiniKiller.cpp" />
-    <ClCompile Include="..\Game\RobotPlayer.cpp" />
-    <ClCompile Include="..\Game\Spawner.cpp" />
-    <ClCompile Include="..\Game\Teleporter.cpp" />
-    <ClCompile Include="..\Game\Weapon.cpp" />
     <ClCompile Include="..\Game\WritingText.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -205,27 +191,12 @@
     <ClInclude Include="..\Engine\System\UnitTest.hpp" />
     <ClInclude Include="..\Game\Bar.hpp" />
     <ClInclude Include="..\Game\BarComponent.hpp" />
-    <ClInclude Include="..\Game\Chest.hpp" />
     <ClInclude Include="..\Game\CollisionComponent.hpp" />
-    <ClInclude Include="..\Game\Fx.hpp" />
     <ClInclude Include="..\Game\GameConfig.hpp" />
-    <ClInclude Include="..\Game\GameMap.hpp" />
     <ClInclude Include="..\Game\GameSingleton.hpp" />
     <ClInclude Include="..\Game\GameState.hpp" />
-    <ClInclude Include="..\Game\Info.hpp" />
     <ClInclude Include="..\Game\IntroState.hpp" />
-    <ClInclude Include="..\Game\MenuState.hpp" />
     <ClInclude Include="..\Game\PopUp.hpp" />
-    <ClInclude Include="..\Game\PreState.hpp" />
-    <ClInclude Include="..\Game\Projectile.hpp" />
-    <ClInclude Include="..\Game\Robot.hpp" />
-    <ClInclude Include="..\Game\RobotKiller.hpp" />
-    <ClInclude Include="..\Game\RobotMegaKiller.hpp" />
-    <ClInclude Include="..\Game\RobotMiniKiller.hpp" />
-    <ClInclude Include="..\Game\RobotPlayer.hpp" />
-    <ClInclude Include="..\Game\Spawner.hpp" />
-    <ClInclude Include="..\Game\Teleporter.hpp" />
-    <ClInclude Include="..\Game\Weapon.hpp" />
     <ClInclude Include="..\Game\WritingText.hpp" />
   </ItemGroup>
   <ItemGroup>

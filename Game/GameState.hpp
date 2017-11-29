@@ -30,23 +30,6 @@ class GameState : public oe::State
 		oe::Time mDuration;
 		oe::ImGuiProfiler mProfiler;
 
-		WritingText mInfoText;
-		U32 mCurrentInfo;
-
-		Bar mBarPlayerLevel;
-		Bar mBarPlayerBattery;
-		sf::Text mPlayerLevelText;
-		Bar mBarPlayerCooldown;
-
-		sf::Sprite mButtonM;
-		sf::Sprite mButtonR;
-		sf::Sprite mButtonI;
-		sf::Sprite mButtonO;
-		U32 mCurrentPopUp;
-		PopUp* mPopUp;
-
-		sf::Sprite mShadow;
-
 };
 
 #endif // GAMESTATE_HPP

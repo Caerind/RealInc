@@ -67,10 +67,14 @@ void ParserXml::closeNode()
 	mCurrentNode = mCurrentNode.parent();
 }
 
-bool ParserXml::createChild(const std::string& nodeName)
+bool ParserXml::createChild(const std::string& nodeName, bool andRead)
 {
 	if (mCurrentNode.append_child(nodeName.c_str()))
 	{
+		if (andRead)
+		{
+			mCurrentNode = mCurrentNode.child(nodeName.c_str());
+		}
 		return true;
 	}
 	return false;

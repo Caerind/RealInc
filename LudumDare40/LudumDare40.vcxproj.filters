@@ -240,12 +240,6 @@
     <ClCompile Include="..\Engine\System\Profiler.cpp">
       <Filter>Engine\System</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\Teleporter.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\Weapon.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Game\WritingText.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -255,16 +249,7 @@
     <ClCompile Include="..\Game\BarComponent.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\Chest.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Game\CollisionComponent.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\Fx.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\GameMap.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\Game\GameSingleton.cpp">
@@ -273,43 +258,13 @@
     <ClCompile Include="..\Game\GameState.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\Info.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Game\IntroState.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\Game\main.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\MenuState.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Game\PopUp.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\PreState.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\Projectile.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\Robot.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\RobotKiller.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\RobotMegaKiller.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\RobotMiniKiller.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\RobotPlayer.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Game\Spawner.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\Engine\ExtLibs\pugixml\pugixml.cpp">
@@ -326,6 +281,9 @@
     </ClCompile>
     <ClCompile Include="..\Engine\ExtLibs\imgui\imgui_draw.cpp">
       <Filter>Engine\ExtLibs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\GameConfig.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -569,12 +527,6 @@
     <ClInclude Include="..\Engine\System\Signal.hpp">
       <Filter>Engine\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\Game\Teleporter.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\Weapon.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\Game\WritingText.hpp">
       <Filter>Game</Filter>
     </ClInclude>
@@ -584,19 +536,7 @@
     <ClInclude Include="..\Game\BarComponent.hpp">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Game\Chest.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\Game\CollisionComponent.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\Fx.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\GameConfig.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\GameMap.hpp">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Game\GameSingleton.hpp">
@@ -605,40 +545,10 @@
     <ClInclude Include="..\Game\GameState.hpp">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Game\Info.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\Game\IntroState.hpp">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Game\MenuState.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\Game\PopUp.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\PreState.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\Projectile.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\Robot.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\RobotKiller.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\RobotMegaKiller.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\RobotMiniKiller.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\RobotPlayer.hpp">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\Spawner.hpp">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Engine\ExtLibs\dirent\dirent.h">
@@ -667,6 +577,9 @@
     </ClInclude>
     <ClInclude Include="..\Engine\ExtLibs\FastDynamicCast\fast_dynamic_cast.h">
       <Filter>Engine\ExtLibs\FastDynamicCast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GameConfig.hpp">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
