@@ -2,94 +2,110 @@
 
 #include "GameSingleton.hpp"
 #include "GameConfig.hpp"
-#include "GameState.hpp" // Used to switch to
 #include "PreState.hpp" // Used to switch to
+#include "GameState.hpp" // Used to switch to
 
 #include "../Engine/Math/Math.hpp"
 #include "../Engine/Math/Vector2.hpp"
 
+#include "../Engine/Application/Application.hpp"
+
 MenuState::MenuState(oe::StateManager& manager)
 	: oe::State(manager)
 {
-	mTextureBg.loadFromFile(TEXTURE_MENU);
-	mBackground.setTexture(mTextureBg);
-	mBackground.setScale(2.0f, 2.0f);
+	mBackground.setTexture(getApplication().getTextures().get(GameSingleton::mMenuUITexture));
 
-	mScreen.setTexture(getApplication().getTextures().get(GameSingleton::screenTexture));
-	mScreen.setTextureRect(sf::IntRect(0, 0, 960, 600));
-	mScreen.setPosition(32, 84);
+	mOk.setSize(sf::Vector2f(42, 42));
+	mOk.setPosition(910, 690);
+	mOk.setFillColor(sf::Color(60, 60, 60));
 
-	mPlay.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mQuit.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mSound.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mMusic.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mSoundButton.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mMusicButton.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
-	mName.setTexture(getApplication().getTextures().get(GameSingleton::guiTexture));
+	mOkTut.setSize(sf::Vector2f(42, 42));
+	mOkTut.setPosition(909, 522);
+	mOkTut.setFillColor(sf::Color(60, 60, 60));
 
-	mPlay.setTextureRect(sf::IntRect(0, 384, 288, 96));
-	mQuit.setTextureRect(sf::IntRect(480, 96, 288, 96));
-	mSound.setTextureRect(sf::IntRect(0, 192, 192, 96));
-	mMusic.setTextureRect(sf::IntRect(192, 192, 192, 96));
-	mSoundButton.setTextureRect(sf::IntRect((getApplication().getAudio().getSoundVolume() > 0.0f) ? 288 : 384, 0, 96, 192));
-	mMusicButton.setTextureRect(sf::IntRect((getApplication().getAudio().getMusicVolume() > 0.0f) ? 288 : 384, 0, 96, 192));
-	mName.setTextureRect(sf::IntRect(288, 384, 288, 96));
+	mSpaceCheat.setSize(sf::Vector2f(80, 80));
+	mSpaceCheat.setPosition(890, 507);
+	mSpaceCheat.setFillColor(sf::Color::Black);
 
-	mSound.setPosition(sf::Vector2f(560, 580));
-	mMusic.setPosition(sf::Vector2f(790, 580));
-	mSoundButton.setPosition(sf::Vector2f(615, 375));
-	mMusicButton.setPosition(sf::Vector2f(830, 375));
-	mPlay.setPosition(150, 300);
-	mQuit.setPosition(150, 450);
-	mName.setPosition(512 - 144, 120);
+	mSoundEnabled = true;
 
-	mShadow.setTexture(getApplication().getTextures().get(GameSingleton::shadowTexture));
-	mShadow.setTextureRect(sf::IntRect(85, 40, 563 - 85, 333 - 40));
-	mShadow.setScale(WINSIZEX / mShadow.getGlobalBounds().width, WINSIZEY / mShadow.getGlobalBounds().height);
+	mTitle.setString(GameConfig::getS("win-title"));
+	mTitle.setCharacterSize(80);
+	mTitle.setFont(getApplication().getFonts().get(GameSingleton::mFont));
+	mTitle.setPosition(512, 230);
+	mTitle.setFillColor(sf::Color::Black);
+	mTitle.setOutlineColor(sf::Color::White);
+	mTitle.setOutlineThickness(5.0f);
+	mTitle.setOrigin(mTitle.getGlobalBounds().width * 0.5f, mTitle.getGlobalBounds().height * 0.5f);
+
+	mTutorialText.setString("Tutorial");
+	mTutorialText.setCharacterSize(40);
+	mTutorialText.setFont(getApplication().getFonts().get(GameSingleton::mFont));
+	mTutorialText.setPosition(910 + 21, 465);
+	mTutorialText.setFillColor(sf::Color::White);
+	mTutorialText.setOrigin(mTutorialText.getGlobalBounds().width * 0.5f, mTutorialText.getGlobalBounds().height * 0.5f);
+	mTutorialText.setStyle(sf::Text::Style::Italic);
+
+	static bool first = true;
+	if (first == true)
+	{
+		mTutorialShow = false;
+		mTutorialEnabled = true;
+		first = false;
+	}
+	else
+	{
+		mTutorialEnabled = false;
+		mTutorialShow = true;
+	}
+
 }
 
 bool MenuState::handleEvent(const sf::Event& event)
 {
 	if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
 	{
-		static sf::FloatRect cross(30, 80, 40, 40);
 		sf::Vector2f mpos((F32)event.mouseButton.x, (F32)event.mouseButton.y);
-		if (mPlay.getGlobalBounds().contains(mpos))
+
+		if (sf::FloatRect(286, 399, 441, 112).contains(mpos))
 		{
-			GameSingleton::click();
-			pushState<PreState>();
+			popState(); 
+			if (mTutorialEnabled)
+			{
+				pushState<PreState>();
+			}
+			else
+			{
+				pushState<GameState>();
+			}
 		}
-		if (mQuit.getGlobalBounds().contains(mpos) || cross.contains(mpos))
+		
+		if (sf::FloatRect(286, 555, 446, 108).contains(mpos))
 		{
-			GameSingleton::playSound(GameSingleton::errorSound);
 			getApplication().getWindow().close();
+			getApplication().getAudio().stop();
+			getApplication().clearStates();
 		}
-		if (mSoundButton.getGlobalBounds().contains(mpos))
+
+		if (sf::FloatRect(892, 673, 81, 74).contains(mpos))
 		{
-			if (getApplication().getAudio().getSoundVolume() > 0.0f)
+			if (mSoundEnabled)
 			{
-				getApplication().getAudio().setSoundVolume(0.0f);
+				getApplication().getAudio().setGlobalVolume(0.0f);
 			}
 			else
 			{
-				getApplication().getAudio().setSoundVolume(50.0f);
+				getApplication().getAudio().setGlobalVolume(10.0f);
 			}
-			mSoundButton.setTextureRect(sf::IntRect((getApplication().getAudio().getSoundVolume() > 0.0f) ? 288 : 384, 0, 96, 192));
-			GameSingleton::playSound(GameSingleton::buttonSound);
+			mSoundEnabled = !mSoundEnabled;
 		}
-		else if (mMusicButton.getGlobalBounds().contains(mpos))
+
+		if (sf::FloatRect(890, 507, 81, 74).contains(mpos) && mTutorialShow)
 		{
-			if (getApplication().getAudio().getMusicVolume() > 0.0f)
-			{
-				getApplication().getAudio().setMusicVolume(0.0f);
-			}
-			else
-			{
-				getApplication().getAudio().setMusicVolume(50.0f);
-			}
-			mMusicButton.setTextureRect(sf::IntRect((getApplication().getAudio().getMusicVolume() > 0.0f) ? 288 : 384, 0, 96, 192));
-			GameSingleton::playSound(GameSingleton::buttonSound);
+			mTutorialEnabled = !mTutorialEnabled;
 		}
+
+
 	}
 	return false;
 }
@@ -103,15 +119,23 @@ void MenuState::render(sf::RenderTarget& target)
 {
 	target.draw(mBackground);
 
-	target.draw(mShadow);
+	if (mSoundEnabled)
+	{
+		target.draw(mOk);
+	}
 
-	target.draw(mScreen);
+	target.draw(mTitle);
 
-	target.draw(mName);
-	target.draw(mPlay);
-	target.draw(mQuit);
-	target.draw(mSoundButton);
-	target.draw(mMusicButton);
-	target.draw(mSound);
-	target.draw(mMusic);
+	if (mTutorialShow)
+	{
+		target.draw(mTutorialText);
+		if (mTutorialEnabled)
+		{
+			target.draw(mOkTut);
+		}
+	}
+	else
+	{
+		target.draw(mSpaceCheat);
+	}
 }

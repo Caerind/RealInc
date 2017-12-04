@@ -3,12 +3,8 @@
 
 #include "../Engine/Application/StateManager.hpp"
 
-#include "../Engine/System/ParserXml.hpp"
-
-#include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Sprite.hpp>
-#include <SFML/Graphics/RectangleShape.hpp>
 
 class PreState : public oe::State
 {
@@ -19,37 +15,10 @@ class PreState : public oe::State
 		bool update(oe::Time dt);
 		void render(sf::RenderTarget& target);
 
-		void generate();
-
-		sf::Color randomColor();
-
 	private:
+		sf::Texture mTexture;
 		sf::Sprite mScreen;
-
-		sf::Sprite mNew;
-
-		sf::Text mTextName;
-		sf::Text mTextDate;
-		
-		sf::Sprite mName;
-		sf::Sprite mDate;
-		sf::Sprite mLoad;
-
-		sf::RectangleShape mSeparator;
-
-		bool mLoaded;
-
-
-
-		sf::Sprite mNameLabel;
-		sf::Sprite mNameBack;
-		sf::Text mNameText;
-
-		sf::Sprite mColorLabel;
-		sf::Sprite mColorBack;
-		sf::Sprite mWheel;
-		sf::Sprite mRobot;
-		sf::Sprite mEyes;
+		U32 mI;
 };
 
 #endif // PRESTATE_HPP

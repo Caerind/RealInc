@@ -32,6 +32,8 @@ class RenderSystem
 		void setDebugVisible(bool visible);
 		bool isDebugVisible() const;
 
+		U32 getEntitiesCount() const;
+
 	private:
 		void preRender(const sf::Vector2u& size);
 		void render();

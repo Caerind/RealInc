@@ -11,6 +11,7 @@ class CollisionComponent : public oe::RenderableComponent
 		void setOrigin(const oe::Vector2& origin);
 		const oe::Vector2& getOrigin() const;
 
+		void setSize(F32 width, F32 height);
 		void setSize(const oe::Vector2& size);
 		const oe::Vector2& getSize() const;
 

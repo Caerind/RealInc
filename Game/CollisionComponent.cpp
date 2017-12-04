@@ -17,6 +17,12 @@ const oe::Vector2& CollisionComponent::getOrigin() const
 	return mOrigin;
 }
 
+void CollisionComponent::setSize(F32 width, F32 height)
+{
+	mSize = oe::Vector2(width, height);
+	mUpdated = false;
+}
+
 void CollisionComponent::setSize(const oe::Vector2& size)
 {
 	mSize = size;

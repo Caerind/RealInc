@@ -5,20 +5,44 @@
 #include "GameConfig.hpp"
 #include "GameSingleton.hpp"
 
-PopUp::PopUp(sf::Texture& screen)
+#include "MenuState.hpp"
+
+#include "../Engine/Application/Application.hpp"
+
+PopUp::PopUp(oe::StateManager& manager)
+	: oe::State(manager)
 {
-	mScreen.setTexture(screen);
-	//mScreen.setPosition(0, 0); // move screen top
-	mOpen = true;
-	mExit = false;
+	mScreen.setTexture(GameSingleton::application->getTextures().get(GameSingleton::mDeadUITexture));
+	mScreen.setOrigin(210, 171);
+	mScreen.setPosition(toSF(GameSingleton::application->getWindow().getSize() * 0.5f));
 }
 
-bool PopUp::isOpen() const
+bool PopUp::handleEvent(const sf::Event & event)
 {
-	return mOpen;
+	if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+	{
+		sf::Vector2f mPos = toSF(getApplication().getWindow().getCursorPosition());
+		if (sf::FloatRect(mScreen.getPosition() - mScreen.getOrigin() + sf::Vector2f(51, 194), sf::Vector2f(147, 79)).contains(mPos))
+		{
+			popState();
+		}
+		else if (sf::FloatRect(mScreen.getPosition() - mScreen.getOrigin() + sf::Vector2f(214, 194), sf::Vector2f(147, 79)).contains(mPos))
+		{
+			popState();
+			popState();
+			pushState<MenuState>();
+		}
+	}
+
+	return false;
 }
 
-bool PopUp::isExit() const
+bool PopUp::update(oe::Time dt)
 {
-	return mExit;
+	return false;
+}
+
+void PopUp::render(sf::RenderTarget & target)
+{
+	target.draw(mScreen);
 }

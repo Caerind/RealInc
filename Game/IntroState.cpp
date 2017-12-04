@@ -6,12 +6,12 @@
 #include "GameSingleton.hpp"
 
 #include "GameState.hpp" // Used to switch to
-//#include "MenuState.hpp" // Used to switch to
+#include "MenuState.hpp" // Used to switch to
 
 IntroState::IntroState(oe::StateManager& manager)
 	: oe::State(manager)
 {
-	//mAtmogTexture.loadFromFile(TEXTURE_ATMOG);
+	mAtmogTexture.loadFromFile("../Assets/Textures/atmog.png");
 	mAtmogSprite.setTexture(mAtmogTexture);
 }
 
@@ -24,14 +24,18 @@ bool IntroState::update(oe::Time dt)
 {
 	GameSingleton::loadResources2();
 
-	static const oe::Time duration = oe::seconds(0.001f);
+	static const oe::Time duration = oe::seconds(1.0f);
 
 	mElapsed += dt;
 	if (mElapsed > duration)
 	{
+		getApplication().getAudio().setGlobalVolume(10.0f);
+
+		oe::ResourceId music = getApplication().getAudio().createMusic("MainTheme", "../Assets/Musics/MainTheme.ogg");
+		getApplication().getAudio().playMusic(music);
+
 		popState();
-		pushState<GameState>();
-		//pushState<MenuState>();
+		pushState<MenuState>();
 	}
 	return false;
 }

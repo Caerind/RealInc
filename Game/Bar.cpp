@@ -6,6 +6,7 @@ Bar::Bar()
 {
 	mValue = 0.0f;
 	mValueMax = 0.0f;
+	mHorizontal = true;
 }
 
 void Bar::setValue(F32 value)
@@ -101,12 +102,40 @@ const sf::Vector2f& Bar::getSize() const
 	return mBack.getSize();
 }
 
+void Bar::setHorizontal(bool horizontal)
+{
+	mHorizontal = horizontal;
+}
+
+void Bar::setVertical(bool vertical)
+{
+	mHorizontal = !vertical;
+}
+
+bool Bar::isVertical() const
+{
+	return !mHorizontal;
+}
+
+bool Bar::isHorizontal() const
+{
+	return mHorizontal;
+}
+
 void Bar::update()
 {
 	if (mValueMax > 0.0f)
 	{
 		const auto& size = mBack.getSize();
 		F32 percent = mValue / mValueMax;
-		mBar.setSize(sf::Vector2f(percent * size.x, size.y));
+		if (mHorizontal)
+		{
+			mBar.setSize(sf::Vector2f(percent * size.x, size.y));
+		}
+		else
+		{
+			mBar.setSize(sf::Vector2f(size.x, percent * size.y));
+			mBar.setPosition(mBack.getPosition().x, mBack.getPosition().y + mBack.getSize().y - mBar.getSize().y);
+		}
 	}
 }

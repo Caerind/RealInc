@@ -76,6 +76,14 @@ void EntityHandle::invalidate()
 	mEntityId = 0;
 }
 
+void EntityHandle::kill()
+{
+	if (mEntityId != 0 && mManager != nullptr)
+	{
+		mManager->killEntity(*this);
+	}
+}
+
 UID EntityHandle::getEntityId() const
 {
 	return mEntityId;

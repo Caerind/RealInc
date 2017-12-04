@@ -34,6 +34,11 @@ class Bar : public sf::Drawable, public sf::Transformable
 		void setSize(const sf::Vector2f& size);
 		const sf::Vector2f& getSize() const;
 
+		void setHorizontal(bool horizontal);
+		void setVertical(bool vertical);
+		bool isVertical() const;
+		bool isHorizontal() const;
+
 	private:
 		void update();
 
@@ -42,6 +47,7 @@ class Bar : public sf::Drawable, public sf::Transformable
 		sf::RectangleShape mBar;
 		F32 mValue;
 		F32 mValueMax;
+		bool mHorizontal;
 
 };
 

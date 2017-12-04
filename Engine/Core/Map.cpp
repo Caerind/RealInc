@@ -141,4 +141,4 @@ void Map::setHexSideLength(U32 hexSideLength)
 	mHexSideLength = hexSideLength;
 }
 
-} // namespace ke
+} // namespace oe

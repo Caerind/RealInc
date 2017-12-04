@@ -31,6 +31,8 @@ class EntityHandle
 
 		void invalidate();
 
+		void kill();
+
 		// You should avoid using those two functions : Only used for debugging and internal management
 		UID getEntityId() const;
 		U32 getHandleIndex() const;

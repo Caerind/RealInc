@@ -96,6 +96,9 @@ const Rect& Entity::getAABB() const
 void Entity::updateAABB() const
 {
 	bool set = false;
+	
+	U32 i = 0;
+	
 	for (auto itr = mSceneComponents.cbegin(); itr != mSceneComponents.cend(); ++itr)
 	{
 		Rect aabb = (*itr)->getGlobalAABB();

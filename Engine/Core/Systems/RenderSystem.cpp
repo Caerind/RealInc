@@ -67,6 +67,11 @@ bool RenderSystem::isDebugVisible() const
 	return mDebugDraw.isVisible();
 }
 
+U32 RenderSystem::getEntitiesCount() const
+{
+	return mQuery.getEntitiesCount();
+}
+
 void RenderSystem::preRender(const sf::Vector2u& size)
 {
 	OE_PROFILE_FUNCTION("RenderSystem::preRender");

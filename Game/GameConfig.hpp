@@ -2,10 +2,13 @@
 #define GAMECONFIG_HPP
 
 #include "../Engine/System/ParserIni.hpp"
+#include "../Engine/Application/ImGuiWrapper.hpp"
 
 class GameConfig
 {
 	public:
+		static std::string configFilename;
+
 		static std::string getS(const std::string& index);
 		static I32 getI(const std::string& index);
 		static F32 getF(const std::string& index);
@@ -27,8 +30,6 @@ class GameConfig
 		static oe::ParserIni mIni;
 };
 
-#endif // GAMECONFIG_HPP
-
 template<typename T>
 inline T GameConfig::get(const std::string & index)
 {
@@ -40,3 +41,14 @@ inline void GameConfig::set(const std::string & index, const T & value)
 {
 	setS(index, oe::toString(value));
 }
+
+
+class ConfigWindow : public oe::ImGuiWindow
+{
+	public:
+		ConfigWindow(F32 x = -1.0f, F32 y = -1.0f, F32 w = -1.0f, F32 h = -1.0f);
+		
+		void draw();
+};
+
+#endif // GAMECONFIG_HPP
